@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {{ partial "head.html" . }}
+</head>
+
+<body>
+
+    {{ partial "hero.html" . }}
+
+    <section class="my-5">
+        <div class="container">
+            <div class="row">
+                <div class="col text-center">
+                    <p class="lead">{{ .Site.Data.kbl.about }}</p>
+
+                    <a class="btn btn-sm btn-outline-primary" href="https://facebook.com/groups/kbl.bumigora/" target="blank">Join Group</a>
+                    <a class="btn btn-sm btn-outline-info" href="https://t.me/kblbumigora" target="blank">Join Chat</a>
+                    <a class="btn btn-sm btn-outline-secondary" href="https://github.com/kblbumigora/" target="blank">Contribute</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="jumbotron bg-light mb-0 rounded-0">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="mb-5 text-center">Kegiatan KBL</h2>
+                </div>
+            </div>
+            <div class="row">
+
+                <div class=" col-md-4">
+                    <div class="card-body">
+                        <h4>Belajar Bersama</h4>
+                        <p>Belajar melalui Kulgram, praktik di Lab., Seminar, dan Workshop</p>
+                    </div>
+                </div>
+                <div class=" col-md-4">
+                    <div class="card-body">
+                        <h4>Event</h4>
+                        <p>Mengadakan Event IT seperti Seminar, Workshop, dan Lomba</p>
+                    </div>
+                </div>
+                <div class=" col-md-4">
+                    <div class="card-body">
+                        <h4>Kolaborasi & Kontribusi</h4>
+                        <p>Member KBL aktif berkontribusi di kegiatan dan proyek Open Source</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <section class="jumbotron bg-info text-white mb-5 rounded-0">
+        <div class="container">
+            <div class="row">
+                <div class="col text-center">
+                    <h2>Registrasi Member KBL</h2>
+                    <p>Ikut jadi bagian keluarga KBL</p>
+                    <a class="btn btn-info active" href="#!" data-toggle="modal" data-target="#modal-daftar">Register</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Gallery Section -->
+    <section class="mb-5">
+        <div class="container">
+            <div class="row">
+                <!-- <div class="col"> -->
+                <!-- <h2 class="mb-5 text-center">Gallery</h2> -->
+
+                <!-- <div class="card-deck"> -->
+
+                {{ range first 12 (where .Data.Pages "Section" "gallery") }}
+                <div class="col-md-3 mb-3 d-flex">
+                    <div class="card p-0">
+                        <a href="{{ .Permalink }}">
+                            <img class="card-img-top" src="{{ .Params.Meta.image }}" />
+                        </a>
+                        <div class="card-body">
+                            <a href="{{ .Permalink }}">
+                                <span class="card-title text-secondary">{{ .Title }}</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                {{ end }}
+                <!-- </div> -->
+
+
+                <!-- </div> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal fade" id="modal-daftar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Info Pendaftaran</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Maaf saat ini pendaftaran anggota baru belum dibuka</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    {{ partial "footer.html" . }} {{ partial "javascript.html" . }}
+
+</body>
+
+</html>
