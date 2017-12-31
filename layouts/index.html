@@ -82,7 +82,7 @@
                 <div class="col-md-3 mb-3 d-flex">
                     <div class="card p-0">
                         <a href="{{ .Permalink }}">
-                            <img class="card-img-top" src="{{ .Params.Meta.image }}" />
+                            <img class="card-img-top" src="{{ .Site.BaseURL }}{{ .Params.Meta.image }}" />
                         </a>
                         <div class="card-body">
                             <a href="{{ .Permalink }}">
