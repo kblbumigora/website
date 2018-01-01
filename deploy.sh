@@ -23,6 +23,7 @@ hugo
 
 echo "Updating gh-pages branch"
 cd public
+git checkout gh-pages
 git add --all
 git commit -m "Publishing to gh-pages (deploy.sh)"
 git push origin gh-pages
