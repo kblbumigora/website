@@ -1,52 +1,29 @@
-#!/bin/bash
+#!/bin/sh
 
-set -e
+DIR=$(dirname "$0")
 
-DEPLOY_REPO="https://${GITHUB_TOKEN}@github.com/kblbumigora/kblbumigora.github.io.git"
+cd $DIR/..
 
-function main {
-	clean
-	get_current_site
-	build_site
-    deploy
-}
+if [[ $(git status -s) ]]
+then
+    echo "The working directory is dirty. Please commit any pending changes."
+    exit 1;
+fi
 
-function clean { 
-	echo "cleaning public folder"
-	if [ -d "public" ]; then rm -rf public; fi 
-}
+echo "Deleting old publication"
+rm -rf public
+mkdir public
+git worktree prune
+rm -rf .git/worktrees/public/
 
-function get_current_site { 
-	echo "getting latest site"
-	git clone --depth 1 $DEPLOY_REPO public 
-}
+echo "Checking out gh-pages branch into public"
+git worktree add -B gh-pages public upstream/gh-pages
 
-function build_site { 
-	echo "building site..."
-	hugo --config config.production.toml
-}
+echo "Removing existing files"
+rm -rf public/*
 
-function deploy {
-	echo "deploying changes"
+echo "Generating site"
+hugo
 
-	if [ -z "$TRAVIS_PULL_REQUEST" ]; then
-	    echo "except don't publish site for pull requests"
-	    exit 0
-	fi  
-
-	if [ "$TRAVIS_BRANCH" != "master" ]; then
-	    echo "except we should only publish the master branch. stopping here"
-	    exit 0
-	fi
-
-	cd public
-	git config --global user.name "KBL Bumigora"
-    git config --global user.email ardianta_pargo@yahoo.co.id
-	git add -A
-	git status
-	git commit -m "Travis build $TRAVIS_BUILD_NUMBER"
-	git push $DEPLOY_REPO master:master
-}
-
-
-main
+echo "Updating gh-pages branch"
+cd public && git add --all && git commit -m "Publishing to gh-pages (deploy.sh)"
