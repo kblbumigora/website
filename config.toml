@@ -1,5 +1,3 @@
 baseURL = "https://kbl.stmikbumigora.ac.id"
 languageCode = "en-us"
 title = "KBL Bumigora"
-
-publishDir = "docs"
