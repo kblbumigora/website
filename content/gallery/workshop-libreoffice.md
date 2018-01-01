@@ -7,7 +7,7 @@ draft: false
 type: gallery
 
 meta:
-    image: "/img/gallery/workshop/libreoffice/panitia-dan-pemateri.jpg"
+    image: "/img/gallery/workshop/libreoffice/workshop-libreoffice.jpg"
     description: "Foto kegiatan Workshop LibreOffice"
 ---
 
@@ -23,4 +23,5 @@ Contoh yang lain bisa diliha di gallery yang sudah terbit
 
 -->
 
-lorem
+![Workshop LibreOffice](/img/gallery/workshop/libreoffice/workshop-libreoffice.jpg)
+![Workshop LibreOffice](/img/gallery/workshop/libreoffice/panitia-dan-pemateri.jpg)
