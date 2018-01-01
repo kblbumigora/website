@@ -41,3 +41,33 @@ Setelah itu buka http://localhost:1313.
 ```bash
 bash deploy.sh
 ```
+
+## Membuat Gallery baru
+
+Contoh: membuat gallery untuk foto seminar nasional 2018.
+
+```bash
+hugo new gallery/seminar-nasional-2018.md
+```
+
+N.B: Nama file harus berakhiran dengan `.md` atau `.markdown` dan tidak boleh menggunakan spasi.
+
+## Membuat Artikel baru
+
+Contoh: membuat artikel untuk pengumuman.
+
+```bash
+hugo new post/jadwal-kegiatan-2018.md
+```
+
+N.B: Nama file harus berakhiran dengan `.md` atau `.markdown` dan tidak boleh menggunakan spasi.
+
+## Membuat halaman baru
+
+Contoh: membuat halaman about
+
+```bash
+hugo new about.md
+```
+
+N.B: Nama file harus berakhiran dengan `.md` atau `.markdown` dan tidak boleh menggunakan spasi.
