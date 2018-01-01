@@ -8,7 +8,7 @@ Ini adalah source code webiste KBL Bumigora. Jika ada saran, pertanyaan, dan isu
 
 Adapun kebutuhan yang harus diinstal untuk mengembangkan website ini adalah:
 
-- git 2.15
+- git 2.15^
 
     ```bash
     sudo add-apt-repository ppa:git-core/ppa
@@ -22,3 +22,13 @@ Adapun kebutuhan yang harus diinstal untuk mengembangkan website ini adalah:
     wget https://github.com/gohugoio/hugo/releases/download/v0.31.1/hugo_0.31.1_Linux-64bit.deb
     sudo dpkg -i hugo_0.31.1_Linux-64bit.deb
     ```
+
+## Menjalankan Server di localhost
+
+Ketik perintah:
+
+```bash
+hugo server
+```
+
+Setelah itu buka http://localhost:1313.
