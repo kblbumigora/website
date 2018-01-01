@@ -1,14 +1,12 @@
 ## Website KBL Bumigora
 
-[![Build Status](https://travis-ci.org/kblbumigora/website.svg?branch=master)](https://travis-ci.org/kblbumigora/website)
-
-Ini adalah source code webiste KBL Bumigora. Jika ada saran, pertanyaan, dan isu lainnya silahkan sampaikan di [Issue Tracker](https://github.com/kblbumigora/website/issues).
+Ini adalah source code webiste KBL Bumigora. Jika ada saran, kritik, pertanyaan, dan isu lainnya silahkan sampaikan di [Issue Tracker](https://github.com/kblbumigora/website/issues).
 
 ## Requirement
 
 Adapun kebutuhan yang harus diinstal untuk mengembangkan website ini adalah:
 
-- git 2.15^
+- Git 2.15^
 
     ```bash
     sudo add-apt-repository ppa:git-core/ppa
@@ -16,7 +14,7 @@ Adapun kebutuhan yang harus diinstal untuk mengembangkan website ini adalah:
     sudo apt-get install git
     ```
 
-- hugo 0.31.1
+- Hugo 0.31.1
 
     ```bash
     wget https://github.com/gohugoio/hugo/releases/download/v0.31.1/hugo_0.31.1_Linux-64bit.deb
@@ -32,3 +30,9 @@ hugo server
 ```
 
 Setelah itu buka http://localhost:1313.
+
+## Melakukan deploy ke Github
+
+```bash
+bash deploy.sh
+```
