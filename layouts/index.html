@@ -107,9 +107,9 @@
             <div class="row">
     
                 <div class="col-md-4">
-                    <h4>Last News: </h4>
+                    <h4>Info Terbaru: </h4>
                     <ul>
-                        {{ range first 6 (where .Data.Pages "Section" "post") }}
+                        {{ range first 7 (where .Data.Pages "Section" "post") }}
                         <li>
                             <a class="card-title text-success" href="{{ .Permalink }}">
                                 {{ .Title }}
@@ -127,11 +127,20 @@
                         <li>Ketua KBL: 01283781283687</li>
                         <li>Media Komunikasi: 01283781283687</li>
                     </ul>
+
+                    <h4>Ikuti KBL di:</h4>
+                    <ul>
+                        <li><a href="https://www.facebook.com/kbl.bumigora/">Facebook</a></li>
+                        <li><a href="https://twitter.com/kbl_bumigora">Twitter</a></li>
+                        <li><a href="http://instagram.com/kbl.bumigora">Instagram</a></li>
+                    </ul>
                 </div>
 
                 <!-- Contact -->
                 <div class="col-md-4">
                     <!-- Embed Google map di sini -->
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3945.051404883665!2d116.11465931411794!3d-8.591056389589621!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dcdbf5c2462a5ed%3A0xbc0f44d683d529b1!2sSTMIK+Bumi+Gora!5e0!3m2!1sid!2sid!4v1514868468043"
+                        width="350" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
                 </div>
                 
             </div>
