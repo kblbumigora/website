@@ -78,7 +78,7 @@
 
                 <!-- <div class="card-deck"> -->
 
-                {{ range first 12 (where .Data.Pages "Section" "gallery") }}
+                {{ range first 8 (where .Data.Pages "Section" "gallery") }}
                 <div class="col-md-3 mb-3 d-flex">
                     <div class="card p-0">
                         <a href="{{ .Permalink }}">
@@ -96,6 +96,44 @@
 
 
                 <!-- </div> -->
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Post Section -->
+    <section class="mb-0 bg-light p-5">
+        <div class="container">
+            <div class="row">
+    
+                <div class="col-md-4">
+                    <h4>Last News: </h4>
+                    <ul>
+                        {{ range first 6 (where .Data.Pages "Section" "post") }}
+                        <li>
+                            <a class="card-title text-success" href="{{ .Permalink }}">
+                                {{ .Title }}
+                            </a>
+                        </li>
+                        {{ end }}
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div class="col-md-4">
+                    <h4>Hubungi kami:</h4>
+                    <ul>
+                        <li>Email: kbl.bumigora@gmail.com</li>
+                        <li>Ketua KBL: 01283781283687</li>
+                        <li>Media Komunikasi: 01283781283687</li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div class="col-md-4">
+                    <!-- Embed Google map di sini -->
+                </div>
+                
             </div>
         </div>
     </section>
