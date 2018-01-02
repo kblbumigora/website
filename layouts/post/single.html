@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {{ partial "head.html" . }}
+</head>
+
+<body>
+
+    {{ partial "hero.html" . }}
+
+    <section class="my-5">
+        <div class="container">
+            <div class="row row align-items-center justify-content-center">
+                <div class="col text-center">
+                    <h2>{{ .Title }}</h2>
+                    <p class="text-secondary small">
+                        <a href="{{ .Params.Author.url }}" class="text-secondary">{{ .Params.Author.name }}</a>
+                        |
+                        <time>{{ .Date.Format "2 Jan 2006" }}</time>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="my-5 gallery">
+        <div class="container">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-md-8">
+                    {{ .Content }}
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {{ partial "footer.html" . }} {{ partial "javascript.html" . }}
+</body>
+
+</html>
