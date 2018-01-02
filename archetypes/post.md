@@ -6,6 +6,9 @@ draft: true
 
 type: post
 
+categories: 
+    - info
+
 author:
     name: "Admin KBL"
     url: "http://kbl.stmikbumigora.ac.id"
