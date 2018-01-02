@@ -24,7 +24,7 @@
         </div>
     </section>
 
-    <section class="my-5 gallery">
+    <section class="my-5">
         <div class="container">
             <div class="row align-items-center justify-content-center">
                 <div class="col-md-8">
@@ -33,6 +33,17 @@
             </div>
         </div>
     </section>
+
+        <section class="my-5">
+            <div class="container">
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-md-8">
+                        {{ partial "fb-comment.html" . }}
+                    </div>
+                </div>
+            </div>
+        </section>
+
 
     {{ partial "footer.html" . }} {{ partial "javascript.html" . }}
 </body>
