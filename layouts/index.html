@@ -111,7 +111,7 @@
                     <ul>
                         {{ range first 7 (where .Data.Pages "Section" "post") }}
                         <li>
-                            <a class="card-title text-success" href="{{ .Permalink }}">
+                            <a href="{{ .Permalink }}">
                                 {{ .Title }}
                             </a>
                         </li>
