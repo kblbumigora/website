@@ -25,7 +25,7 @@ Git bisa diinstal melalui perintah:
 sudo apt install git
 ```
 
-Akan tentapi, versi yang akan terinstall adalah versi lama.
+Akan tetapi, versi yang akan terinstall adalah versi lama.
 
 Bagaimana cara menginstall Git versi terbaru?
 
