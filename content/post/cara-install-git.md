@@ -15,8 +15,8 @@ author:
     url: "http://kbl.stmikbumigora.ac.id"
 
 meta:
-    image: "/img/post/"
-    description: "Deskripsi singkat artikelnya"
+    image: "/img/post/git/versi-git.png"
+    description: "Bagaimana cara menginstall Git versi terbaru?"
 ---
 
 Git bisa diinstal melalui perintah:
@@ -36,5 +36,10 @@ sudo add-apt-repository ppa:git-core/ppa
 sudo apt-get update
 sudo apt-get install git
 ```
+
+Setelah itu, coba perika versi yang terinstal dengan perintah
+`git --version`.
+
+![Versi Git](/img/post/git/versi-git.png)
 
 <!-- Tulis Artikel di sini -->
