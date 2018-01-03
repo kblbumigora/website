@@ -1,0 +1,12 @@
+
+a:hover {text-decoration: none}
+
+.bg-kbl {
+    background: #34495e;
+}
+
+.gallery img {
+    max-width: 100%;
+    margin: 10px auto;
+}
+
