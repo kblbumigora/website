@@ -17,7 +17,7 @@ commit_website_files() {
 
 upload_files() {
   git remote add origin-pages https://${GITHUB_TOKEN}@github.com/kblbumigora/website.git > /dev/null 2>&1
-  git push --quiet --set-upstream origin-pages gh-pages 
+  git push --force --set-upstream origin-pages gh-pages 
 }
 
 setup_git
