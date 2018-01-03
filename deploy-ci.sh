@@ -9,14 +9,18 @@ fi
 echo "Deleting old publication"
 rm -rf public
 
+echo "Clone last build"
+git clone --depth 1 -b gh-pages --single-branch https://${GITHUB_TOKEN}@github.com/kblbumigora/website.git public
+
 echo "Generating site..."
 hugo
 
 
 echo "Updating gh-pages branch"
 cd public
-git init
+git config --global user.name "KBL Bumigora"
+git config --global user.email kbl.bumigora@gmail.com
+#git init
 git add --all
 git commit -m "Build from Travis CI"
-#git remote add origin-pages https://${GITHUB_TOKEN}@github.com/kblbumigora/website.git > /dev/null 2>&1
 git push --force "https://${GITHUB_TOKEN}@github.com/kblbumigora/website.git" master:gh-pages > /dev/null 2>&1
