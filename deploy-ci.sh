@@ -25,5 +25,5 @@ echo "Updating gh-pages branch"
 cd public
 git add --all
 git commit -m "Publishing to gh-pages (deploy.sh)"
-#git remote add origin-pages https://${GITHUB_TOKEN}@github.com/kblbumigora/website.git > /dev/null 2>&1
-git push --force --set-upstream origin gh-pages 
+git remote add origin-pages https://${GITHUB_TOKEN}@github.com/kblbumigora/website.git > /dev/null 2>&1
+git push --set-upstream origin gh-pages 
