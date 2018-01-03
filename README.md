@@ -38,12 +38,6 @@ hugo server
 
 Setelah itu buka http://localhost:1313.
 
-## Melakukan deploy ke Github
-
-```bash
-bash deploy.sh
-```
-
 ## Membuat Gallery baru
 
 Contoh: membuat gallery untuk foto seminar nasional 2018.
@@ -73,3 +67,22 @@ hugo new about.md
 ```
 
 N.B: Nama file harus berakhiran dengan `.md` atau `.markdown` dan tidak boleh menggunakan spasi.
+
+## Melakukan deploy ke Github
+
+Ada dua cara yang bisa dilakukan:
+
+1. Deploy secara manual
+2. Deploy menggunakan CI (Continous Integration)
+
+#### 1. Deploy Secara Manual
+
+Ketik perintah berikut bila ingin melakukan deploy secara manual ke Github:
+
+```bash
+bash deploy.sh
+```
+
+#### 2. Deploy Menggunakan CI
+
+Deploy menggunakan CI dilakukan otomatis oleh Travis CI setiap ada commit terbaru ke branch master. Hal ini bisa dilihat pada konfigurasi file `.travis.yml`.
