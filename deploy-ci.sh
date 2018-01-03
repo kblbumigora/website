@@ -19,4 +19,4 @@ git init
 git add --all
 git commit -m "Build from Travis CI"
 #git remote add origin-pages https://${GITHUB_TOKEN}@github.com/kblbumigora/website.git > /dev/null 2>&1
-git push --force "https://${GITHUB_TOKEN}@$github.com/kblbumigora/website.git" master:gh-pages > /dev/null 2>&1
+git push --force "https://${GITHUB_TOKEN}@github.com/kblbumigora/website.git" master:gh-pages > /dev/null 2>&1
